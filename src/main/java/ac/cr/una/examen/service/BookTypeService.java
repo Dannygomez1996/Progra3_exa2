@@ -13,10 +13,24 @@ import ac.cr.una.examen.model.BookType;
  */
 public interface BookTypeService {
 
+    /**
+     *
+     * @return
+     */
     public boolean deleteAll();
 
+    /**
+     *
+     * @param bookType
+     * @return
+     */
     public BookType save(BookType bookType);
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public BookType findByName(String name);
 
 }

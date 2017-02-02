@@ -31,30 +31,58 @@ public class BookType implements Serializable {
     @Column(name = "type", unique = false, nullable = false)
     private String type;
 
+    /**
+     *
+     * @param idType
+     * @param type
+     */
     public BookType(int idType, String type) {
         this.idType = idType;
         this.type = type;
     }
 
+    /**
+     *
+     */
     public BookType() {
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdType() {
         return idType;
     }
 
+    /**
+     *
+     * @param idType
+     */
     public void setIdType(int idType) {
         this.idType = idType;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 7;
@@ -63,6 +91,11 @@ public class BookType implements Serializable {
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -84,6 +117,10 @@ public class BookType implements Serializable {
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "BookType{" + "idType=" + idType + ", type=" + type + '}';

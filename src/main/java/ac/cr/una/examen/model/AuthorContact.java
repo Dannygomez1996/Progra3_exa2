@@ -42,6 +42,13 @@ public class AuthorContact {
     @Column(name = "type", unique = false, nullable = false)
     private String type;
 
+    /**
+     *
+     * @param idAuthorContact
+     * @param author
+     * @param contact
+     * @param type
+     */
     public AuthorContact(int idAuthorContact, Author author, String contact, String type) {
         this.idAuthorContact = idAuthorContact;
         this.author = author;
@@ -49,41 +56,80 @@ public class AuthorContact {
         this.type = type;
     }
 
+    /**
+     *
+     */
     public AuthorContact() {
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdAuthorContact() {
         return idAuthorContact;
     }
 
+    /**
+     *
+     * @param idAuthorContact
+     */
     public void setIdAuthorContact(int idAuthorContact) {
         this.idAuthorContact = idAuthorContact;
     }
 
+    /**
+     *
+     * @return
+     */
     public Author getAuthor() {
         return author;
     }
 
+    /**
+     *
+     * @param author
+     */
     public void setAuthor(Author author) {
         this.author = author;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getContact() {
         return contact;
     }
 
+    /**
+     *
+     * @param contact
+     */
     public void setContact(String contact) {
         this.contact = contact;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -94,6 +140,11 @@ public class AuthorContact {
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -121,6 +172,10 @@ public class AuthorContact {
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "AuthorContact{" + "idAuthorContact=" + idAuthorContact + ", author=" + author + ", contact=" + contact + ", type=" + type + '}';

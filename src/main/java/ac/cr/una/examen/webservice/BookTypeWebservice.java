@@ -36,16 +36,29 @@ public class BookTypeWebservice {
     @Context
     private UriInfo context;
 
+    /**
+     *
+     */
     public BookTypeWebservice() {
     }
 
+    /**
+     *
+     * @param bookTypeDAO
+     * @param bookTypeService
+     * @param context
+     */
     public BookTypeWebservice(BookTypeDAO bookTypeDAO, BookTypeService bookTypeService, UriInfo context) {
         this.bookTypeDAO = bookTypeDAO;
         this.bookTypeService = bookTypeService;
         this.context = context;
     }
   
-
+    /**
+     *
+     * @param name
+     * @return
+     */
     @GET
     @Path("/{id}") 
     @Produces(MediaType.APPLICATION_JSON)
@@ -60,6 +73,11 @@ public class BookTypeWebservice {
     
     }
 
+    /**
+     *
+     * @param bookType
+     * @return
+     */
     @POST
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -74,6 +92,10 @@ public class BookTypeWebservice {
         return bookType;
     }
 
+    /**
+     *
+     * @return
+     */
     @DELETE
     @Path("/")
     public boolean deleteAll() {

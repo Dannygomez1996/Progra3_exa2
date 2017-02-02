@@ -13,7 +13,23 @@ import java.util.List;
  * @author Danny Andrey Gómez Chaves 116440310
  */
 public interface BookDAO {
+
+    /**
+     *
+     * @param book
+     * @return
+     */
     public Book save(Book book);
+
+    /**
+     *
+     * @return
+     */
     public List<Book> findAll ();
+
+    /**
+     *
+     * @return
+     */
     public boolean deleteAll(); 
 }

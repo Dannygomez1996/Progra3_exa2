@@ -20,38 +20,69 @@ import java.util.List;
 public class BookServiceImp implements BookService{
     private BookDAO bookDAO;
 
+    /**
+     *
+     */
     public BookServiceImp() {
     }
 
+    /**
+     *
+     * @param bookDAO
+     */
     public BookServiceImp(BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }
   
-
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean deleteAll() {
         return bookDAO.deleteAll();
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @Override
     public Book save(Book book) {
         return bookDAO.save(book);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public List<Book> findAll() {
         return bookDAO.findAll();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public float totalPriceAll() {
        return 0;
     }
 
+    /**
+     *
+     * @return
+     */
     public BookDAO getBookDAO() {
         return bookDAO;
     }
 
+    /**
+     *
+     * @param bookDAO
+     */
     public void setBookDAO(BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }

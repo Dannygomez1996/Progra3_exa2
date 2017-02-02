@@ -44,6 +44,15 @@ public class Book {
     @Column(name = "price", unique = false, nullable = false)
     private float price;
 
+    /**
+     *
+     * @param idBook
+     * @param author
+     * @param type
+     * @param Name
+     * @param dateRelease
+     * @param price
+     */
     public Book(int idBook, Author author, BookType type, String Name, Calendar dateRelease, float price) {
         this.idBook = idBook;
         this.author = author;
@@ -53,57 +62,112 @@ public class Book {
         this.price = price;
     }
 
+    /**
+     *
+     */
     public Book() {
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdBook() {
         return idBook;
     }
 
+    /**
+     *
+     * @param idBook
+     */
     public void setIdBook(int idBook) {
         this.idBook = idBook;
     }
 
+    /**
+     *
+     * @return
+     */
     public Author getAuthor() {
         return author;
     }
 
+    /**
+     *
+     * @param author
+     */
     public void setAuthor(Author author) {
         this.author = author;
     }
 
+    /**
+     *
+     * @return
+     */
     public BookType getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType(BookType type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return Name;
     }
 
+    /**
+     *
+     * @param Name
+     */
     public void setName(String Name) {
         this.Name = Name;
     }
 
+    /**
+     *
+     * @return
+     */
     public Calendar getDateRelease() {
         return dateRelease;
     }
 
+    /**
+     *
+     * @param dateRelease
+     */
     public void setDateRelease(Calendar dateRelease) {
         this.dateRelease = dateRelease;
     }
 
+    /**
+     *
+     * @return
+     */
     public float getPrice() {
         return price;
     }
 
+    /**
+     *
+     * @param price
+     */
     public void setPrice(float price) {
         this.price = price;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -116,6 +180,11 @@ public class Book {
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -149,6 +218,10 @@ public class Book {
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Book{" + "idBook=" + idBook + ", author=" + author + ", type=" + type + ", Name=" + Name + ", dateRelease=" + dateRelease + ", price=" + price + '}';

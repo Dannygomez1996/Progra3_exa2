@@ -40,6 +40,13 @@ public class AuthorWebservice {
     @Context
     private UriInfo context;
 
+    /**
+     *
+     * @param authorDAO
+     * @param authorContactDAO
+     * @param authorService
+     * @param context
+     */
     public AuthorWebservice(AuthorDAO authorDAO, AuthorContactDAO authorContactDAO, AuthorService authorService, UriInfo context) {
         this.authorDAO = authorDAO;
         this.authorContactDAO = authorContactDAO;
@@ -47,9 +54,16 @@ public class AuthorWebservice {
         this.context = context;
     }
 
+    /**
+     *
+     */
     public AuthorWebservice() {
     }
 
+    /**
+     *
+     * @return
+     */
     @GET
     @Path(value = "/")
     @Produces(value = MediaType.APPLICATION_JSON)
@@ -63,6 +77,11 @@ public class AuthorWebservice {
         return authorList;
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -76,6 +95,11 @@ public class AuthorWebservice {
         return au;
     }
 
+    /**
+     *
+     * @param au
+     * @return
+     */
     @POST
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -90,6 +114,10 @@ public class AuthorWebservice {
         return au;
     }
 
+    /**
+     *
+     * @return
+     */
     @DELETE
     @Path("/")
     public boolean deleteAll() {
