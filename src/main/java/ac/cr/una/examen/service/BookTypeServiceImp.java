@@ -16,32 +16,61 @@ public class BookTypeServiceImp implements BookTypeService {
 
     private BookTypeDAO bookTypeDAO;
 
+    /**
+     *
+     */
     public BookTypeServiceImp() {
     }
 
+    /**
+     *
+     * @param bookTypeDAO
+     */
     public BookTypeServiceImp(BookTypeDAO bookTypeDAO) {
         this.bookTypeDAO = bookTypeDAO;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean deleteAll() {
         return bookTypeDAO.deleteAll();
     }
 
+    /**
+     *
+     * @param bookType
+     * @return
+     */
     @Override
     public BookType save(BookType bookType) {
         return bookTypeDAO.save(bookType);
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     @Override
     public BookType findByName(String name) {
         return bookTypeDAO.findByName(name);
     }
 
+    /**
+     *
+     * @return
+     */
     public BookTypeDAO getBookTypeDAO() {
         return bookTypeDAO;
     }
 
+    /**
+     *
+     * @param bookTypeDAO
+     */
     public void setBookTypeDAO(BookTypeDAO bookTypeDAO) {
         this.bookTypeDAO = bookTypeDAO;
     }

@@ -15,12 +15,29 @@ import java.util.List;
  */
 public interface BookService {
 
+    /**
+     *
+     * @return
+     */
     public boolean deleteAll();
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     public Book save(Book book);
 
+    /**
+     *
+     * @return
+     */
     public List<Book> findAll();
 
+    /**
+     *
+     * @return
+     */
     public float totalPriceAll();
 
 }

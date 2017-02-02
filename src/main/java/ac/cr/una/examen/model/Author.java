@@ -31,30 +31,58 @@ public class Author implements Serializable{
     @Column(name = "name", unique = false, nullable = false)
     private String name;
 
+    /**
+     *
+     * @param idAuthor
+     * @param name
+     */
     public Author(int idAuthor, String name) {
         this.idAuthor = idAuthor;
         this.name = name;
     }
 
+    /**
+     *
+     */
     public Author() {
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdAuthor() {
         return idAuthor;
     }
 
+    /**
+     *
+     * @param idAuthor
+     */
     public void setIdAuthor(int idAuthor) {
         this.idAuthor = idAuthor;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -63,6 +91,11 @@ public class Author implements Serializable{
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -84,6 +117,10 @@ public class Author implements Serializable{
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Author{" + "idAuthor=" + idAuthor + ", Name=" + name + '}';

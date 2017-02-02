@@ -18,8 +18,11 @@ import org.hibernate.Session;
 public class AuthorContactDAOImp implements AuthorContactDAO{
      private final Session session = HibernateUtil.getSessionFactory().openSession();
 
-  
-
+    /**
+     *
+     * @param author
+     * @return
+     */
     @Override
     public AuthorContact save(AuthorContact author) {
         session.beginTransaction();
@@ -29,7 +32,10 @@ public class AuthorContactDAOImp implements AuthorContactDAO{
         return author;
     }
 
-   
+    /**
+     *
+     * @return
+     */
     @Override
     public List<AuthorContact> findAll() {
         List<AuthorContact> authorList = new ArrayList<>();
@@ -39,6 +45,10 @@ public class AuthorContactDAOImp implements AuthorContactDAO{
         return authorList;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean deleteAll() {
         boolean isDeleted = false;

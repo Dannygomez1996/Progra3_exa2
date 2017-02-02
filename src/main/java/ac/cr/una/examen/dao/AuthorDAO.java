@@ -13,6 +13,12 @@ import java.util.List;
  * @author Danny Andrey Gómez Chaves 116440310
  */
 public interface AuthorDAO {
+
+    /**
+     *
+     * @param name
+     * @return
+     */
     public Author findByName (String name);
     
 }

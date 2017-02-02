@@ -15,12 +15,30 @@ import java.util.List;
  */
 public interface AuthorService {
 
+    /**
+     *
+     * @return
+     */
     public boolean deleteAll();
 
+    /**
+     *
+     * @param author
+     * @return
+     */
     public AuthorContact save(AuthorContact author);
 
+    /**
+     *
+     * @return
+     */
     public List<AuthorContact> findAll();
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public Author findByName(String name);
 
 }

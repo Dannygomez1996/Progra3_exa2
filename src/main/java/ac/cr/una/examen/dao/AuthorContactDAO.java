@@ -15,10 +15,23 @@ import org.hibernate.Session;
  */
 public interface AuthorContactDAO {
 
+    /**
+     *
+     * @return
+     */
     public boolean deleteAll();
 
+    /**
+     *
+     * @param author
+     * @return
+     */
     public AuthorContact save(AuthorContact author);
 
+    /**
+     *
+     * @return
+     */
     public List<AuthorContact> findAll();
 
 }
